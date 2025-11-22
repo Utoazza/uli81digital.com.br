@@ -1,156 +1,177 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capa ULI81 - Apoio Completo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            font-family: 'Inter', sans-serif;
-        }
-        .card-container {
-            width: 1200px;
-            height: 630px; /* Tamanho padrão para partilha em redes sociais (Open Graph) */
-            background: linear-gradient(135deg, #0056b3 0%, #003a80 100%);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-            display: flex;
-            flex-direction: row;
-        }
-        
-        /* Elementos Decorativos de Fundo */
-        .circle-bg {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.1;
-            background: white;
-        }
-        .c1 { width: 600px; height: 600px; top: -200px; left: -200px; }
-        .c2 { width: 400px; height: 400px; bottom: -100px; right: -100px; }
-        
-        /* Conteúdo de Texto (Lado Esquerdo) */
-        .text-content {
-            flex: 1;
-            padding: 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: white;
-            z-index: 10;
-        }
-        
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .highlight {
-            color: #ffcc00; /* Amarelo para destaque */
-        }
-        
-        p {
-            font-size: 1.5rem;
-            font-weight: 400;
-            line-height: 1.5;
-            opacity: 0.9;
-            margin-bottom: 40px;
-            max-width: 500px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #ffcc00;
-            color: #003a80;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            width: fit-content;
-        }
+/* --- GERAL E VARIÁVEIS --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@300;400;600;700&display=swap');
 
-        /* Área da Imagem (Lado Direito) */
-        .image-area {
-            flex: 1;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        /* Representação visual abstrata de crescimento */
-        .growth-icon {
-            font-size: 15rem;
-            color: rgba(255, 255, 255, 0.2);
-            position: absolute;
-            right: 50px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        
-        /* Simulação de uma imagem de destaque */
-        .feature-image {
-            width: 80%;
-            height: 70%;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            z-index: 5;
-        }
+:root {
+    --cor-principal: #0056b3;
+    --cor-secundaria: #00418a;
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333333;
+    --cor-branco: #ffffff;
+}
 
-    </style>
-</head>
-<body>
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo);
+    scroll-behavior: smooth;
+}
 
-    <div class="card-container">
-        <!-- Fundo Decorativo -->
-        <div class="circle-bg c1"></div>
-        <div class="circle-bg c2"></div>
+/* --- UTILITÁRIOS ULI81 --- */
+.uli-blue { color: var(--cor-principal); }
+.uli-bg-blue { background-color: var(--cor-principal); }
+.uli-text-dark { color: var(--cor-texto); }
 
-        <!-- Conteúdo de Texto -->
-        <div class="text-content">
-            <h1>Apoio Completo para o Seu <span class="highlight">Negócio Decolar</span></h1>
-            <p>Para quem está começando, para o comércio local e para PMEs que buscam resultados reais no mundo digital.</p>
-            <div class="cta-button">Vamos Crescer Juntos</div>
-        </div>
+/* --- COMPONENTES ESPECÍFICOS --- */
 
-        <!-- Área Visual -->
-        <div class="image-area">
-            <!-- Ícone de Foguete (Unicode) -->
-            <div class="growth-icon">🚀</div>
-            
-            <!-- Espaço para Imagem -->
-            <div class="feature-image">
-                <div>
-                    <strong>ULI81 Digital</strong><br>
-                    <span style="font-size: 1rem; opacity: 0.8;">Tecnologia • Estratégia • Crescimento</span>
-                </div>
-            </div>
-        </div>
-    </div>
+/* Logo na Navegação */
+.nav-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
 
-</body>
-</html>
+/* Cards (Serviços, FAQ, Clientes) */
+.card {
+    background: var(--cor-branco);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Acordeão (FAQ) */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 0 1rem 0;
+    color: #4b5563;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+    padding-top: 1rem;
+}
+
+/* Links de Clientes */
+.client-name-link {
+    font-weight: bold;
+    color: var(--cor-principal);
+    transition: color 0.2s;
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.client-name-link:hover {
+    color: #003a80;
+    text-decoration: underline;
+}
+
+/* Itens de Serviço */
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.service-icon-box {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background-color: #e0f2fe;
+}
+
+/* Citação (Depoimentos) */
+.quote {
+    font-style: italic;
+    border-left: 4px solid var(--cor-principal);
+    padding-left: 12px;
+    margin-top: 0.75rem;
+    color: #555;
+    font-size: 0.95rem;
+    background-color: #f9fafb;
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Foto de Perfil */
+.profile-img {
+    box-shadow: 10px 10px 0px var(--cor-principal);
+    border-radius: 8px;
+}
+
+/* --- HERO SECTION (CAPA) --- */
+/* AQUI ESTÁ O SEGREDO DA IMAGEM DE CAPA */
+.hero-section {
+    background-image: url('../../../image_988235.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Camada escura para melhorar leitura */
+.hero-overlay {
+    background-color: rgba(0, 86, 179, 0.85); /* Azul com transparência */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- BOTÃO WHATSAPP FLUTUANTE --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: var(--cor-principal);
+    padding: 1rem;
+    border-radius: 9999px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    z-index: 50;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #16a34a; /* Verde ao passar o mouse */
+}
+
+.tooltip {
+    position: absolute;
+    right: 100%;
+    margin-right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #1f2937;
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.whatsapp-float:hover .tooltip {
+    opacity: 1;
+}
