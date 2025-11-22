@@ -1,177 +1,358 @@
-/* --- GERAL E VARIÁVEIS --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@300;400;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 1. VERIFICAÇÃO DO GOOGLE (SEO) -->
+    <meta name="google-site-verification" content="u02YKvjbFv4zlAMQDbW-tTWWJY0f27abe6b9cCSvkw8" />
 
-:root {
-    --cor-principal: #0056b3;
-    --cor-secundaria: #00418a;
-    --cor-fundo: #f4f4f4;
-    --cor-texto: #333333;
-    --cor-branco: #ffffff;
-}
+    <!-- 2. GOOGLE ANALYTICS (GA4) -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHC75MB5L9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--cor-fundo);
-    scroll-behavior: smooth;
-}
+      gtag('config', 'G-BHC75MB5L9');
+    </script>
 
-/* --- UTILITÁRIOS ULI81 --- */
-.uli-blue { color: var(--cor-principal); }
-.uli-bg-blue { background-color: var(--cor-principal); }
-.uli-text-dark { color: var(--cor-texto); }
+    <!-- Título e Descrição -->
+    <title>Consultoria Estratégica em TI e Suporte Técnico | ULI81 Digital</title>
+    <meta name="description" content="Consultoria de TI para PMEs, Autônomos e Comércios em Erechim e todo o Brasil. Suporte técnico, otimização de PCs, criação de sites e gestão de redes sociais. Fale com Ulisses Toazza.">
+    
+    <!-- Tailwind CSS (Estilo Moderno) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes e Ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Link para o seu arquivo CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="text-gray-800 antialiased">
 
-/* --- COMPONENTES ESPECÍFICOS --- */
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5554991573831" target="_blank" class="whatsapp-float group">
+        <span class="text-white flex items-center justify-center w-full h-full">
+            <i data-lucide="message-circle" class="w-8 h-8"></i>
+        </span>
+        <span class="tooltip">Fale Comigo</span>
+    </a>
 
-/* Logo na Navegação */
-.nav-logo {
-    height: 50px;
-    width: auto;
-    object-fit: contain;
-}
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- LOGO -->
+                <a href="#inicio" class="flex items-center">
+                    <!-- IMPORTANTE: Certifique-se que logo.jpg está na pasta raiz -->
+                    <img src="logo.jpg" alt="Logo ULI81" class="nav-logo mr-3">
+                    <span class="text-2xl font-extrabold uli-blue tracking-tight hidden sm:block">ULI81 DIGITAL</span>
+                </a>
+                
+                <!-- MENU DESKTOP -->
+                <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                    <a href="#inicio" class="hover:text-[#0056b3] transition">Início</a>
+                    <a href="#sobre" class="hover:text-[#0056b3] transition">Sobre</a>
+                    <a href="#servicos" class="hover:text-[#0056b3] transition">Serviços</a>
+                    <a href="#clientes" class="hover:text-[#0056b3] transition">Clientes</a>
+                    <a href="#faq" class="hover:text-[#0056b3] transition">Dúvidas</a>
+                    <a href="#contato" class="hover:text-[#0056b3] transition">Contato</a>
+                </div>
 
-/* Cards (Serviços, FAQ, Clientes) */
-.card {
-    background: var(--cor-branco);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
+                <!-- REDES SOCIAIS -->
+                <div class="hidden md:flex space-x-4 items-center">
+                    <a href="https://instagram.com/uli81_consultoria_digital" target="_blank" class="text-gray-400 hover:text-pink-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="https://www.facebook.com/uli81consultoriadigital" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                </div>
+                
+                <!-- MENU MOBILE -->
+                <div class="md:hidden flex items-center">
+                    <a href="https://wa.me/5554991573831" class="uli-bg-blue text-white px-4 py-2 rounded-md text-sm font-bold">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
+    <main class="container mx-auto p-4 md:p-8 space-y-20">
+        
+        <!-- 1. HERO SECTION (CAPA) -->
+        <section id="inicio" class="hero-section rounded-2xl shadow-2xl overflow-hidden -mt-4 md:-mt-8">
+            <div class="hero-overlay"></div>
+            <div class="hero-content py-20 md:py-32 text-center text-white px-4">
+                <div class="max-w-4xl mx-auto">
+                    <span class="bg-white text-[#0056b3] px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide mb-6 inline-block shadow-md">Consultoria para PMEs e Autônomos</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+                        Apoio Completo para o Seu Negócio <span class="text-yellow-400">Decolar.</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-10 leading-relaxed opacity-90">
+                        Para quem está começando, para o comércio local e para PMEs que buscam <strong>resultados reais</strong> no mundo digital.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="https://wa.me/5554991573831" target="_blank" class="bg-yellow-400 text-[#0056b3] font-bold py-4 px-8 rounded-lg text-lg shadow-xl hover:bg-yellow-300 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle"></i> Vamos Crescer Juntos
+                        </a>
+                        <a href="#servicos" class="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-white hover:text-[#0056b3] transition flex items-center justify-center gap-2">
+                            Ver Soluções <i data-lucide="arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-/* Acordeão (FAQ) */
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0 0 1rem 0;
-    color: #4b5563;
-}
+        <!-- 2. SEÇÃO SOBRE MIM -->
+        <section id="sobre" class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <!-- FOTO -->
+                <div class="relative h-full min-h-[400px] bg-gray-100 p-8 flex items-center justify-center">
+                    <!-- Certifique-se de que o arquivo ulisses.jpg está na pasta raiz do GitHub -->
+                    <img src="ulisses.jpg" alt="Ulisses Toazza" class="profile-img w-full max-w-md object-cover h-auto border-4 border-white">
+                </div>
+                
+                <!-- TEXTO -->
+                <div class="p-8 md:p-12 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold uli-text-dark mb-2">Olá, sou Ulisses Toazza.</h2>
+                    <p class="text-[#0056b3] font-bold text-lg mb-6">O seu estrategista de tecnologia e negócios.</p>
+                    
+                    <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+                        <p>Minha carreira não começou num escritório com ar condicionado. Começou no <strong>chão de fábrica</strong>. Passei pela logística, pelas compras e cheguei à gerência.</p>
+                        <p>Em cada etapa, vi empresas com potencial perderem dinheiro por causa de tecnologia ruim ou processos lentos. Isso frustrava-me.</p>
+                        <p>Hoje, com formação em <strong>Administração</strong>, <strong>MBA em Logística</strong> e cursando <strong>Engenharia de Computação</strong>, a minha missão é clara:</p>
+                        <p class="font-bold uli-text-dark border-l-4 border-[#0056b3] pl-4">
+                            Traduzir o "tecniquês" para a língua do seu negócio e garantir que você tenha a tecnologia certa para crescer, sem gastar um centavo a mais do que o necessário.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="https://wa.me/5554991573831" target="_blank" class="inline-flex items-center font-bold uli-blue hover:text-blue-800 transition">
+                            Vamos conversar sobre o seu projeto <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.accordion-content.active {
-    max-height: 500px;
-    padding-top: 1rem;
-}
+        <!-- 3. SEÇÃO DE SERVIÇOS -->
+        <section id="servicos">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold uli-text-dark mb-4">O Seu Único Ponto de Contato</h2>
+                <p class="text-xl text-gray-600">Resolvo tudo, da máquina ao marketing, para você focar em vender.</p>
+            </div>
 
-/* Links de Clientes */
-.client-name-link {
-    font-weight: bold;
-    color: var(--cor-principal);
-    transition: color 0.2s;
-    display: block;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Consultoria (Nacional) -->
+                <div class="card border-t-4 border-[#0056b3]">
+                    <div class="mb-6">
+                        <div class="w-12 h-12 uli-bg-blue rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="rocket" class="text-white w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold uli-text-dark">Consultoria & Crescimento (Nacional)</h3>
+                        <p class="text-gray-500 mt-2">Para alavancar resultados e investir com inteligência.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="service-item">
+                            <div class="service-icon-box"><i data-lucide="shopping-cart" class="w-5 h-5 uli-blue"></i></div>
+                            <div><span class="font-bold block text-gray-800">Indicação de Equipamentos</span> Não compre o mais caro, compre o certo.</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon-box"><i data-lucide="layout-grid" class="w-5 h-5 uli-blue"></i></div>
+                            <div><span class="font-bold block text-gray-800">Criação de Sites Otimizados</span> Uma vitrine profissional que converte.</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon-box"><i data-lucide="trending-up" class="w-5 h-5 uli-blue"></i></div>
+                            <div><span class="font-bold block text-gray-800">Estratégia Digital</span> Tráfego Pago e Orgânico para atrair clientes.</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon-box"><i data-lucide="cloud" class="w-5 h-5 uli-blue"></i></div>
+                            <div><span class="font-bold block text-gray-800">Otimização de Software</span> Melhore a produtividade da sua equipa.</div>
+                        </div>
+                    </div>
+                </div>
 
-.client-name-link:hover {
-    color: #003a80;
-    text-decoration: underline;
-}
+                <!-- Suporte Técnico (Local) -->
+                <div class="card border-t-4 border-gray-400">
+                    <div class="mb-6">
+                        <div class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+                            <i data-lucide="wrench" class="text-white w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold uli-text-dark">Suporte Técnico (Local/Remoto)</h3>
+                        <p class="text-gray-500 mt-2">Velocidade para resolver problemas do dia a dia.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="service-item">
+                            <div class="service-icon-box"><i data-lucide="shield-check" class="w-5 h-5 text-gray-700"></i></div>
+                            <div><span class="font-bold block text-gray-800">Remoção de Vírus e Segurança</span> Proteção total de dados.</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon-box"><i data-lucide="cpu" class="w-5 h-5 text-gray-700"></i></div>
+                            <div><span class="font-bold block text-gray-800">Otimização e Formatação</span> Seu PC 10x mais rápido.</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon-box"><i data-lucide="router" class="w-5 h-5 text-gray-700"></i></div>
+                            <div><span class="font-bold block text-gray-800">Redes e Wi-Fi (Erechim/RS)</span> Conectividade estável.</div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon-box"><i data-lucide="hard-drive" class="w-5 h-5 text-gray-700"></i></div>
+                            <div><span class="font-bold block text-gray-800">Backup de Dados</span> O seguro do seu negócio.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-/* Itens de Serviço */
-.service-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-}
+        <!-- 4. PROVA SOCIAL (CLIENTES COM LINKS E DEPOIMENTOS) -->
+        <section id="clientes" class="bg-blue-50 -mx-4 md:-mx-8 px-4 md:px-8 py-16">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold uli-blue text-center mb-10">Quem Confia no Nosso Trabalho</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Cliente 1 -->
+                    <div class="card flex flex-col justify-between min-h-[280px]">
+                        <div>
+                            <div class="mb-4 text-center"><span class="text-4xl bg-blue-100 p-3 rounded-full">⚖️</span></div>
+                            <!-- LINK DO CLIENTE AQUI -->
+                            <a href="https://crisfisioforense.com.br" target="_blank" class="client-name-link text-center">Cristiane Bohm dos Santos</a>
+                            <p class="text-xs font-bold text-gray-500 text-center uppercase tracking-wide mb-4">Fisioterapia Forense</p>
+                        </div>
+                        <div class="quote">"A ULI81 me deu o suporte técnico de alta qualidade que preciso para ter excelência em laudos. Tudo funciona e meu foco é 100% no trabalho."</div>
+                        <a href="https://crisfisioforense.com.br" target="_blank" class="text-xs text-gray-500 mt-2 text-right hover:text-blue-600 block">Ver Site</a>
+                    </div>
 
-.service-icon-box {
-    flex-shrink: 0;
-    margin-right: 0.75rem;
-    padding: 0.5rem;
-    border-radius: 6px;
-    background-color: #e0f2fe;
-}
+                    <!-- Cliente 2 -->
+                    <div class="card flex flex-col justify-between min-h-[280px]">
+                        <div>
+                            <div class="mb-4 text-center"><span class="text-4xl bg-pink-100 p-3 rounded-full">✨</span></div>
+                            <!-- LINK DO CLIENTE AQUI -->
+                            <a href="https://drakleiprior.com.br" target="_blank" class="client-name-link text-center">Dra. Klei Prior</a>
+                            <p class="text-xs font-bold text-gray-500 text-center uppercase tracking-wide mb-4">Biomédica Esteta</p>
+                        </div>
+                        <div class="quote">"O site ficou elegante e seguro. A ULI81 traduziu meu olhar sensível para o digital, garantindo uma imagem profissional."</div>
+                        <a href="https://drakleiprior.com.br" target="_blank" class="text-xs text-gray-500 mt-2 text-right hover:text-blue-600 block">Ver Site</a>
+                    </div>
 
-/* Citação (Depoimentos) */
-.quote {
-    font-style: italic;
-    border-left: 4px solid var(--cor-principal);
-    padding-left: 12px;
-    margin-top: 0.75rem;
-    color: #555;
-    font-size: 0.95rem;
-    background-color: #f9fafb;
-    padding: 10px;
-    border-radius: 0 8px 8px 0;
-}
+                    <!-- Cliente 3 -->
+                    <div class="card flex flex-col justify-between min-h-[280px]">
+                        <div>
+                            <div class="mb-4 text-center"><span class="text-4xl bg-gray-200 p-3 rounded-full">🧱</span></div>
+                            <!-- LINK DO CLIENTE AQUI -->
+                            <a href="https://mwmpedras.com.br" target="_blank" class="client-name-link text-center">MWM Pedras</a>
+                            <p class="text-xs font-bold text-gray-500 text-center uppercase tracking-wide mb-4">Indústria e Comércio</p>
+                        </div>
+                        <div class="quote">"Com a otimização de sistemas da ULI81, garantimos detalhes impecáveis e processos mais eficientes. Serviço excepcional."</div>
+                        <a href="https://mwmpedras.com.br" target="_blank" class="text-xs text-gray-500 mt-2 text-right hover:text-blue-600 block">Ver Site</a>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="https://wa.me/5554991573831" target="_blank" class="uli-bg-blue text-white font-bold py-3 px-8 rounded-lg inline-block transition-colors hover:bg-blue-700 shadow-lg">
+                        Seja o Nosso Próximo Caso de Sucesso!
+                    </a>
+                </div>
+            </div>
+        </section>
 
-/* Foto de Perfil */
-.profile-img {
-    box-shadow: 10px 10px 0px var(--cor-principal);
-    border-radius: 8px;
-}
+        <!-- 5. FAQ -->
+        <section id="faq" class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold uli-text-dark text-center mb-10">Tire Suas Dúvidas</h2>
+            <div class="card space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-gray-100 pb-2">
+                    <button class="flex justify-between items-center w-full py-3 text-left font-bold text-gray-700 hover:text-[#0056b3]" onclick="toggleAccordion('faq1')">
+                        O serviço é caro para um pequeno negócio? <i data-lucide="chevron-down" class="w-5 h-5 text-[#0056b3]"></i>
+                    </button>
+                    <div id="faq1" class="accordion-content">
+                        <p>Focamos em <strong>valor bom</strong>. A nossa consultoria poupa dinheiro ao evitar compras erradas e paragens.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-gray-100 pb-2">
+                    <button class="flex justify-between items-center w-full py-3 text-left font-bold text-gray-700 hover:text-[#0056b3]" onclick="toggleAccordion('faq2')">
+                        Quanto tempo demora para arrumar meu PC? <i data-lucide="chevron-down" class="w-5 h-5 text-[#0056b3]"></i>
+                    </button>
+                    <div id="faq2" class="accordion-content">
+                        <p>Com nosso diagnóstico rápido, muitas vezes resolvemos remotamente no mesmo dia. Serviços físicos têm prazo preciso após avaliação.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="pb-2">
+                    <button class="flex justify-between items-center w-full py-3 text-left font-bold text-gray-700 hover:text-[#0056b3]" onclick="toggleAccordion('faq3')">
+                        Não sou de Erechim/RS. Podem me atender? <i data-lucide="chevron-down" class="w-5 h-5 text-[#0056b3]"></i>
+                    </button>
+                    <div id="faq3" class="accordion-content">
+                        <p>Sim! Consultoria e serviços digitais são 100% online para todo o Brasil. Suporte físico foca na região de Erechim.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-/* --- HERO SECTION (CAPA) --- */
-/* AQUI ESTÁ O SEGREDO DA IMAGEM DE CAPA */
-.hero-section {
-    background-image: url('../../../image_988235.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
+    </main>
 
-/* Camada escura para melhorar leitura */
-.hero-overlay {
-    background-color: rgba(0, 86, 179, 0.85); /* Azul com transparência */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
+    <!-- RODAPÉ -->
+    <footer id="contato" class="bg-gray-900 text-white pt-16 pb-8 mt-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Marca -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="logo.jpg" alt="Logo Footer" class="h-12 w-auto mr-3 bg-white rounded p-1">
+                        <span class="text-2xl font-bold tracking-wider">ULI81 DIGITAL</span>
+                    </div>
+                    <p class="text-gray-400 text-lg max-w-md">Não deixe a tecnologia travar o seu crescimento. Fale com o seu estrategista digital hoje.</p>
+                </div>
+                
+                <!-- Contato -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-b-2 border-[#0056b3] inline-block pb-2">Fale Comigo</h4>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5 text-[#0056b3]"></i> (54) 99157-3831</li>
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5 text-[#0056b3]"></i> uli81consultoria@gmail.com</li>
+                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-[#0056b3]"></i> Erechim, RS (Atendimento Nacional)</li>
+                    </ul>
+                </div>
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
+                <!-- Redes -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-b-2 border-[#0056b3] inline-block pb-2">Siga-nos</h4>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/uli81_consultoria_digital" target="_blank" class="bg-gray-800 p-3 rounded-full hover:bg-pink-600 transition"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="https://www.facebook.com/uli81consultoriadigital" target="_blank" class="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="https://wa.me/5554991573831" target="_blank" class="bg-gray-800 p-3 rounded-full hover:bg-green-500 transition"><i data-lucide="message-circle" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 ULI81 Consultoria Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-/* --- BOTÃO WHATSAPP FLUTUANTE --- */
-.whatsapp-float {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background-color: var(--cor-principal);
-    padding: 1rem;
-    border-radius: 9999px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    z-index: 50;
-    transition: transform 0.3s, background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 64px;
-    height: 64px;
-}
+    <!-- SCRIPT GLOBAL -->
+    <script>
+        lucide.createIcons();
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #16a34a; /* Verde ao passar o mouse */
-}
-
-.tooltip {
-    position: absolute;
-    right: 100%;
-    margin-right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #1f2937;
-    color: white;
-    font-size: 0.75rem;
-    padding: 4px 8px;
-    border-radius: 4px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    white-space: nowrap;
-    pointer-events: none;
-}
-
-.whatsapp-float:hover .tooltip {
-    opacity: 1;
-}
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.querySelector(`button[onclick="toggleAccordion('${id}')"] i`);
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                if(icon) icon.style.transform = 'rotate(0deg)';
+            } else {
+                document.querySelectorAll('.accordion-content').forEach(el => { el.classList.remove('active'); });
+                document.querySelectorAll('.accordion-content').forEach(el => {
+                     const btn = el.previousElementSibling;
+                     const ic = btn.querySelector('i');
+                     if(ic) ic.style.transform = 'rotate(0deg)';
+                });
+                content.classList.add('active');
+                if(icon) icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</body>
+</html>
