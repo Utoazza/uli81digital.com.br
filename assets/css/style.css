@@ -107,9 +107,9 @@ body {
 }
 
 /* --- HERO SECTION (CAPA) --- */
+/* AQUI ESTÁ O SEGREDO DA IMAGEM DE CAPA */
 .hero-section {
-    /* Certifique-se que esta imagem existe na pasta raiz */
-    background-image: url('../../../image_988235.jpg'); 
+    background-image: url('image_988235.jpg'); /* Imagem na raiz */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
