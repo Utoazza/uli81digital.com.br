@@ -107,9 +107,13 @@ body {
 }
 
 /* --- HERO SECTION (CAPA) --- */
-/* AQUI ESTÁ O SEGREDO DA IMAGEM DE CAPA */
 .hero-section {
-    background-image: url('image_988235.jpg'); /* Imagem na raiz */
+    /* CORREÇÃO AQUI: Adicionei a cor de fundo azul como base */
+    background-color: var(--cor-principal); 
+    
+    /* Tentei ajustar o caminho para garantir. Se a imagem estiver na raiz e o CSS na pasta assets/css, o caminho é ../../ */
+    background-image: url('../../image_988235.jpg'); 
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
