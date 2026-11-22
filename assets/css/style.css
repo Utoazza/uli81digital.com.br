@@ -3,8 +3,6 @@
    Arquivo: assets/css/style.css
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
-
 :root {
     --uli-blue: #0056b3;
     --uli-blue-dark: #003a80;
@@ -82,7 +80,7 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
-/* --- HERO SECTION (RESPONSIVO INTELIGENTE: PC COM FUNDO / CELULAR COM BANNER INTEIRO) --- */
+/* --- HERO SECTION (DESKTOP: FUNDO FULL / CELULAR: BANNER INTEIRO) --- */
 .hero-section {
     background-color: var(--uli-navy);
     background-image:
@@ -93,7 +91,6 @@ h1, h2, h3, h4 {
     box-shadow: 0 25px 60px -15px rgba(4, 13, 31, 0.7);
 }
 
-/* No Desktop (telas >= 1024px), usa hero-tech.webp em tela cheia à direita */
 @media (min-width: 1024px) {
     .hero-section {
         background-image:
