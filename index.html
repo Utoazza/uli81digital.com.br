@@ -24,7 +24,7 @@
       gtag('config', 'G-BHC75MB5L9');
     </script>
 
-    <!-- 4. SEO, FAVICON E OPEN GRAPH (META DESCRIPTION COM 139 CARACTERES — APROVADA NO BING E GOOGLE) -->
+    <!-- 4. SEO, FAVICON E OPEN GRAPH -->
     <title>ULI81 Digital | Sites Profissionais, Marketing Digital e Sistemas Sob Medida</title>
     <meta name="description" content="Criação de sites profissionais, gestão de redes sociais, SEO e sistemas sob medida em Erechim/RS e todo o Brasil. Fale com a ULI81 Digital.">
     <link rel="canonical" href="https://uli81digital.com.br/" />
@@ -76,11 +76,11 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fontes e Ícones -->
+    <!-- Fontes e Ícones (Otimizados) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <!-- CSS Próprio -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -103,7 +103,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="#inicio" class="flex items-center gap-3">
-                    <img src="assets/images/logo-uli81.png" alt="Logo ULI81 Digital" class="nav-logo">
+                    <img src="assets/images/logo-uli81.png" alt="Logo ULI81 Digital" width="46" height="46" class="nav-logo">
                     <div>
                         <span class="text-xl font-extrabold tracking-tight block leading-none">ULI81 <span class="text-[#00f0ff]">DIGITAL</span></span>
                         <span class="text-[11px] text-slate-400 tracking-widest uppercase">Tecnologia & Estratégia</span>
@@ -185,9 +185,9 @@
                     </a>
                 </div>
 
-                <!-- Imagem exclusiva para Celular e Tablet (aparece inteira, sem cortar o rosto nem a IA) -->
+                <!-- Imagem exclusiva para Celular e Tablet (aparece inteira, sem cortar) -->
                 <div class="mt-8 lg:hidden">
-                    <img src="assets/images/hero-tech.webp" alt="Ulisses Eduardo Toazza — Tecnologia e Estratégia Digital na ULI81" class="hero-mobile-img w-full h-auto object-cover">
+                    <img src="assets/images/hero-tech.webp" alt="Ulisses Eduardo Toazza — Tecnologia e Estratégia Digital na ULI81" fetchpriority="high" width="1280" height="720" class="hero-mobile-img w-full h-auto object-cover">
                 </div>
 
                 <!-- Selos Rápidos de Autoridade -->
@@ -281,7 +281,7 @@
         <section id="sobre" class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
             <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
                 <div class="bg-[#040d1f] p-10 md:p-14 flex items-center justify-center h-full">
-                    <img src="assets/images/ulisses-perfil.webp" alt="Ulisses Eduardo Toazza — Fundador da ULI81 Digital" loading="lazy" class="profile-img-neon w-full max-w-sm object-cover aspect-square">
+                    <img src="assets/images/ulisses-perfil.webp" alt="Ulisses Eduardo Toazza — Fundador da ULI81 Digital" loading="lazy" width="400" height="400" class="profile-img-neon w-full max-w-sm object-cover aspect-square">
                 </div>
 
                 <div class="p-8 md:p-14">
@@ -321,7 +321,7 @@
             </div>
         </section>
 
-        <!-- 4. PROVA SOCIAL / CASE EM DESTAQUE (APENAS DRA. CRISTIANE BOHM) -->
+        <!-- 4. PROVA SOCIAL / CASE EM DESTAQUE (DRA. CRISTIANE BOHM) -->
         <section id="clientes" class="bg-[#040d1f] rounded-3xl p-8 md:p-14 text-white border border-cyan-500/20 shadow-2xl">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-sm font-bold uppercase tracking-widest text-[#00f0ff]">Projeto Real no Ar</span>
@@ -333,7 +333,7 @@
             <div class="card-dark-neon !p-6 md:!p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-7">
                     <a href="https://crisfisioforense.com.br" target="_blank" rel="noopener noreferrer" class="block overflow-hidden rounded-xl">
-                        <img src="assets/images/case-crisfisio.webp" alt="Mockup do site da Dra. Cristiane Bohm — Fisioterapia Forense" loading="lazy" class="case-mockup-img w-full h-auto object-cover">
+                        <img src="assets/images/case-crisfisio.webp" alt="Mockup do site da Dra. Cristiane Bohm — Fisioterapia Forense" loading="lazy" width="1200" height="675" class="case-mockup-img w-full h-auto object-cover">
                     </a>
                 </div>
                 <div class="lg:col-span-5 flex flex-col justify-between">
@@ -433,7 +433,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
                 <div class="md:col-span-2">
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="assets/images/logo-uli81.png" alt="Logo ULI81 Digital" class="nav-logo">
+                        <img src="assets/images/logo-uli81.png" alt="Logo ULI81 Digital" width="46" height="46" class="nav-logo">
                         <span class="text-2xl font-extrabold tracking-tight">ULI81 <span class="text-[#00f0ff]">DIGITAL</span></span>
                     </div>
                     <p class="text-slate-400 text-base max-w-md leading-relaxed">
@@ -499,19 +499,23 @@
 
     <!-- SCRIPTS -->
     <script>
-        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
 
-        // Menu Mobile
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+                });
+            }
         });
 
-        // Acordeão FAQ
         function toggleAccordion(id, button) {
             const content = document.getElementById(id);
             const iconWrapper = button.querySelector('.icon-wrapper');
