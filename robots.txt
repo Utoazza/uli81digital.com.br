@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://uli81digital.com.br/sitemap.xml
