@@ -1,149 +1,218 @@
-/* --- GERAL E VARIÁVEIS --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@300;400;600;700&display=swap');
+/* ==========================================================================
+   ULI81 DIGITAL — DESIGN SYSTEM FUTURISTA & NEON
+   Arquivo: assets/css/style.css
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
 
 :root {
-    --cor-principal: #0056b3;
-    --cor-secundaria: #00418a;
-    --cor-fundo: #f4f4f4;
-    --cor-texto: #333333;
-    --cor-branco: #ffffff;
+    --uli-blue: #0056b3;
+    --uli-blue-dark: #003a80;
+    --uli-navy: #040d1f;
+    --uli-navy-card: #0a1935;
+    --uli-neon: #00f0ff;
+    --uli-neon-glow: rgba(0, 240, 255, 0.35);
+    --uli-yellow: #facc15;
+    --uli-bg: #f1f5f9;
+    --uli-text: #1e293b;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--cor-fundo);
-    scroll-behavior: smooth;
+    background-color: var(--uli-bg);
+    color: var(--uli-text);
+    overflow-x: hidden;
 }
 
-/* --- UTILITÁRIOS ULI81 --- */
-.uli-blue { color: var(--cor-principal); }
-.uli-bg-blue { background-color: var(--cor-principal); }
-.uli-text-dark { color: var(--cor-texto); }
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
 
-/* --- COMPONENTES ESPECÍFICOS --- */
+/* --- UTILITÁRIOS --- */
+.uli-blue { color: var(--uli-blue); }
+.uli-bg-blue { background-color: var(--uli-blue); }
+.uli-neon-text {
+    color: var(--uli-neon);
+    text-shadow: 0 0 18px rgba(0, 240, 255, 0.45);
+}
 
-/* Logo na Navegação */
+/* --- NAVEGAÇÃO --- */
+.navbar-glass {
+    background: rgba(4, 13, 31, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.18);
+}
+
 .nav-logo {
-    height: 50px;
+    height: 46px;
     width: auto;
     object-fit: contain;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 3px;
+    box-shadow: 0 0 14px rgba(0, 240, 255, 0.35);
 }
 
-/* Cards (Serviços, FAQ, Clientes) */
-.card {
-    background: var(--cor-branco);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-/* Links de Clientes */
-.client-name-link {
-    font-weight: bold;
-    color: var(--cor-principal);
-    transition: color 0.2s;
-    display: block;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-
-.client-name-link:hover {
-    color: #003a80;
-    text-decoration: underline;
-}
-
-/* Itens de Serviço */
-.service-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-}
-
-.service-icon-box {
-    flex-shrink: 0;
-    margin-right: 0.75rem;
-    padding: 0.5rem;
-    border-radius: 6px;
-    background-color: #e0f2fe;
-}
-
-/* Citação (Depoimentos) */
-.quote {
-    font-style: italic;
-    border-left: 4px solid var(--cor-principal);
-    padding-left: 12px;
-    margin-top: 0.75rem;
-    color: #555;
-    font-size: 0.95rem;
-    background-color: #f9fafb;
-    padding: 10px;
-    border-radius: 0 8px 8px 0;
-}
-
-/* Foto de Perfil */
-.profile-img {
-    box-shadow: 10px 10px 0px var(--cor-principal);
-    border-radius: 8px;
-}
-
-/* --- HERO SECTION (CAPA AZUL) --- */
-.hero-section {
-    /* AQUI ESTÁ A PROTEÇÃO: Fundo sempre azul se a imagem falhar */
-    background-color: #0056b3; 
-    
-    /* Caminho da imagem saindo de assets/css/ para a raiz */
-    background-image: url('../../image_988235.jpg'); 
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.nav-link {
     position: relative;
+    transition: color 0.25s ease;
 }
 
-.hero-overlay {
-    background-color: rgba(0, 86, 179, 0.85); 
+.nav-link::after {
+    content: '';
     position: absolute;
-    top: 0;
     left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--uli-neon);
+    box-shadow: 0 0 8px var(--uli-neon);
+    transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--uli-neon);
+}
+
+.nav-link:hover::after {
     width: 100%;
-    height: 100%;
-    z-index: 1;
 }
 
-.hero-content {
+/* --- HERO FUTURISTA (CSS PURO — CARREGAMENTO INSTANTÂNEO) --- */
+.hero-section {
+    background-color: var(--uli-navy);
+    background-image:
+        radial-gradient(circle at 18% 20%, rgba(0, 86, 179, 0.65) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(0, 240, 255, 0.22) 0%, transparent 45%),
+        linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 42px 42px, 42px 42px;
     position: relative;
-    z-index: 2;
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    box-shadow: 0 25px 60px -15px rgba(4, 13, 31, 0.65);
 }
 
-/* --- FAQ (ACORDEÃO MELHORADO) --- */
+.badge-neon {
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.45);
+    color: var(--uli-neon);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.18);
+}
+
+/* --- BOTÕES COM BRILHO --- */
+.btn-neon-yellow {
+    background-color: var(--uli-yellow);
+    color: var(--uli-navy);
+    box-shadow: 0 0 24px rgba(250, 204, 21, 0.4);
+    transition: all 0.25s ease;
+}
+
+.btn-neon-yellow:hover {
+    background-color: #fde047;
+    transform: translateY(-2px);
+    box-shadow: 0 0 32px rgba(250, 204, 21, 0.65);
+}
+
+.btn-neon-outline {
+    background: rgba(0, 240, 255, 0.06);
+    border: 1.5px solid var(--uli-neon);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.18);
+    transition: all 0.25s ease;
+}
+
+.btn-neon-outline:hover {
+    background: var(--uli-neon);
+    color: var(--uli-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 0 28px rgba(0, 240, 255, 0.55);
+}
+
+/* --- CARDS DE SERVIÇO E CLIENTES --- */
+.card-tech {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.75rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 24px -8px rgba(15, 23, 42, 0.08);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.card-tech:hover {
+    transform: translateY(-5px);
+    border-color: var(--uli-blue);
+    box-shadow: 0 18px 36px -10px rgba(0, 86, 179, 0.22);
+}
+
+.card-dark-neon {
+    background: linear-gradient(145deg, #071530 0%, #040d1f 100%);
+    border-radius: 16px;
+    padding: 1.75rem;
+    border: 1px solid rgba(0, 240, 255, 0.22);
+    color: #ffffff;
+    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.card-dark-neon:hover {
+    transform: translateY(-5px);
+    border-color: var(--uli-neon);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+}
+
+.icon-badge-neon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    color: var(--uli-neon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+/* --- FOTO DE PERFIL --- */
+.profile-img-neon {
+    border-radius: 16px;
+    border: 3px solid var(--uli-neon);
+    box-shadow: 12px 12px 0px var(--uli-blue), 0 0 30px rgba(0, 240, 255, 0.25);
+}
+
+/* --- DEPOIMENTOS --- */
+.quote-box {
+    font-style: italic;
+    border-left: 3px solid var(--uli-neon);
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 0.9rem 1rem;
+    border-radius: 0 10px 10px 0;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- FAQ ACORDEÃO --- */
 .accordion-content {
-    /* Escondido por padrão */
-    display: block; /* Necessário para transição de max-height */
+    display: block;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-in-out, padding 0.4s ease, opacity 0.4s ease;
-    padding: 0 1rem; 
-    opacity: 0; 
-    color: #4b5563;
+    transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+    opacity: 0;
 }
 
-/* Classe usada para mostrar o conteúdo */
-.accordion-content:not(.hidden) {
-    max-height: 500px; /* Altura suficiente */
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.accordion-content.open {
+    max-height: 400px;
     opacity: 1;
-    border-top: 1px solid #f0f0f0;
-    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+    border-top: 1px solid #e2e8f0;
 }
 
-/* Wrapper do ícone para rotação */
 .icon-wrapper {
     display: inline-flex;
     transition: transform 0.3s ease;
@@ -154,22 +223,29 @@ body {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    background-color: var(--cor-principal);
-    padding: 1rem;
+    background-color: #16a34a;
+    color: #ffffff;
     border-radius: 9999px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    z-index: 50;
-    transition: transform 0.3s, background-color 0.3s;
+    width: 62px;
+    height: 62px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
+    z-index: 50;
+    box-shadow: 0 10px 25px rgba(22, 163, 74, 0.45), 0 0 0 0 rgba(22, 163, 74, 0.5);
+    animation: pulse-green 2.2s infinite;
+    transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
-    background-color: #16a34a; /* Verde WhatsApp */
+    background-color: #15803d;
+}
+
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.55); }
+    70% { box-shadow: 0 0 0 16px rgba(22, 163, 74, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
 }
 
 .tooltip {
@@ -178,13 +254,15 @@ body {
     margin-right: 12px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #1f2937;
-    color: white;
-    font-size: 0.75rem;
-    padding: 4px 8px;
-    border-radius: 4px;
+    background-color: var(--uli-navy);
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.25s ease;
     white-space: nowrap;
     pointer-events: none;
 }
