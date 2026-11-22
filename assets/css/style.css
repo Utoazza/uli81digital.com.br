@@ -82,27 +82,33 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
-/* --- HERO SECTION COM IMAGEM HERO-TECH.WEBP --- */
+/* --- HERO SECTION (RESPONSIVO INTELIGENTE: PC COM FUNDO / CELULAR COM BANNER INTEIRO) --- */
 .hero-section {
     background-color: var(--uli-navy);
     background-image:
-        linear-gradient(90deg, rgba(4, 13, 31, 0.96) 0%, rgba(4, 13, 31, 0.86) 48%, rgba(4, 13, 31, 0.30) 100%),
-        url('../images/hero-tech.webp');
-    background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
+        radial-gradient(circle at 20% 20%, rgba(0, 86, 179, 0.45) 0%, transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(0, 240, 255, 0.16) 0%, transparent 50%);
     position: relative;
     border: 1px solid rgba(0, 240, 255, 0.28);
     box-shadow: 0 25px 60px -15px rgba(4, 13, 31, 0.7);
 }
 
-@media (max-width: 768px) {
+/* No Desktop (telas >= 1024px), usa hero-tech.webp em tela cheia à direita */
+@media (min-width: 1024px) {
     .hero-section {
         background-image:
-            linear-gradient(180deg, rgba(4, 13, 31, 0.88) 0%, rgba(4, 13, 31, 0.78) 60%, rgba(4, 13, 31, 0.94) 100%),
+            linear-gradient(90deg, rgba(4, 13, 31, 0.96) 0%, rgba(4, 13, 31, 0.86) 46%, rgba(4, 13, 31, 0.25) 100%),
             url('../images/hero-tech.webp');
-        background-position: 72% center;
+        background-size: cover;
+        background-position: right center;
+        background-repeat: no-repeat;
     }
+}
+
+.hero-mobile-img {
+    border-radius: 16px;
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 240, 255, 0.15);
 }
 
 .badge-neon {
