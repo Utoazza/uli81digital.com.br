@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 1. VERIFICAÇÃO DO GOOGLE (SEO) -->
-    <meta name="google-site-verification" content="u02YKvjbFv4zlAMQDbW-tTWWJY0f27abe6b9cCSvkw8" />
 
-    <!-- 2. GOOGLE ANALYTICS (GA4) -->
+    <!-- 1. VERIFICAÇÃO GOOGLE SEARCH CONSOLE & MICROSOFT BING -->
+    <meta name="google-site-verification" content="u02YKvjbFv4zlAMQDbW-tTWWJY0f27abe6b9cCSvkw8" />
+    <meta name="msvalidate.01" content="94BA92D87A7E56C95D6787D579D0088C" />
+
+    <!-- 2. GOOGLE TAG MANAGER (HEAD) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-54DGWV8P');</script>
+
+    <!-- 3. GOOGLE ANALYTICS (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHC75MB5L9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -16,344 +24,477 @@
       gtag('config', 'G-BHC75MB5L9');
     </script>
 
-    <!-- Título e Descrição -->
-    <title>Consultoria Estratégica em TI e Suporte Técnico | ULI81 Digital</title>
-    <meta name="description" content="Consultoria de TI para PMEs, Autônomos e Comércios em Erechim e todo o Brasil. Suporte técnico, otimização de PCs, criação de sites e gestão de redes sociais. Fale com Ulisses Toazza.">
-    
+    <!-- 4. SEO E OPEN GRAPH (WHATSAPP / LINKEDIN / INSTAGRAM) -->
+    <title>ULI81 Digital | Sites Profissionais, Marketing Digital e Sistemas Sob Medida</title>
+    <meta name="description" content="Criação de sites profissionais, organização e gestão de redes sociais, SEO e sistemas sob medida. Para quem está começando e empresas consolidadas em Erechim/RS e todo o Brasil.">
+    <link rel="canonical" href="https://uli81digital.com.br/" />
+    <link rel="icon" type="image/png" href="logo.png" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uli81digital.com.br/">
+    <meta property="og:title" content="ULI81 Digital | Sites, Marketing Digital e Sistemas Sob Medida">
+    <meta property="og:description" content="Transforme sua presença online em resultados reais. Sites rápidos, gestão de redes sociais, SEO e sistemas personalizados para todo o Brasil.">
+    <meta property="og:image" content="https://uli81digital.com.br/logo.png">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Fontes e Ícones -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Link para o seu arquivo CSS -->
+
+    <!-- CSS Próprio -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="text-gray-800 antialiased">
+<body class="antialiased">
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54DGWV8P"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-    <a href="https://wa.me/5554991573831" target="_blank" class="whatsapp-float group">
-        <span class="text-white flex items-center justify-center w-full h-full">
-            <i data-lucide="message-circle" class="w-8 h-8"></i>
-        </span>
-        <span class="tooltip">Fale Comigo</span>
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5554991573831?text=Ol%C3%A1%20Ulisses!%20Vim%20pelo%20site%20da%20ULI81%20Digital%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+       target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" class="whatsapp-float">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+        <span class="tooltip">Pedir Diagnóstico</span>
     </a>
 
     <!-- BARRA DE NAVEGAÇÃO -->
-    <nav class="bg-white shadow-md sticky top-0 z-40">
+    <nav class="navbar-glass sticky top-0 z-40 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="#inicio" class="flex items-center">
-                    <img src="logo.png" alt="Logo ULI81" class="nav-logo mr-3">
-                    <span class="text-2xl font-extrabold uli-blue tracking-tight hidden sm:block">ULI81 DIGITAL</span>
+                <a href="#inicio" class="flex items-center gap-3">
+                    <img src="logo.png" alt="Logo ULI81 Digital" class="nav-logo">
+                    <div>
+                        <span class="text-xl font-extrabold tracking-tight block leading-none">ULI81 <span class="text-[#00f0ff]">DIGITAL</span></span>
+                        <span class="text-[11px] text-slate-400 tracking-widest uppercase">Tecnologia & Estratégia</span>
+                    </div>
                 </a>
-                
-                <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
-                    <a href="#inicio" class="hover:text-[#0056b3] transition">Início</a>
-                    <a href="#sobre" class="hover:text-[#0056b3] transition">Sobre</a>
-                    <a href="#servicos" class="hover:text-[#0056b3] transition">Serviços</a>
-                    <a href="#clientes" class="hover:text-[#0056b3] transition">Clientes</a>
-                    <a href="#faq" class="hover:text-[#0056b3] transition">Dúvidas</a>
-                    <a href="#contato" class="hover:text-[#0056b3] transition">Contato</a>
+
+                <!-- Links Desktop -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-200">
+                    <a href="#inicio" class="nav-link">Início</a>
+                    <a href="#servicos" class="nav-link">Soluções</a>
+                    <a href="#sobre" class="nav-link">Quem Sou</a>
+                    <a href="#clientes" class="nav-link">Cases</a>
+                    <a href="#faq" class="nav-link">Dúvidas</a>
+                    <a href="#contato" class="nav-link">Contato</a>
                 </div>
 
-                <div class="hidden md:flex space-x-4 items-center">
-                    <a href="https://www.instagram.com/uli81_consultoria_digital?utm_source=qr&igsh=MWtsMGMzcHNydmhkdA==" target="_blank" class="text-gray-400 hover:text-pink-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                    <a href="https://www.facebook.com/uli81consultoriadigital" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                <!-- Redes + Botão Desktop -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="https://www.instagram.com/uli81_consultoria_digital/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-slate-400 hover:text-[#00f0ff] transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="https://www.facebook.com/uli81consultoriadigital" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-slate-400 hover:text-[#00f0ff] transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="https://www.linkedin.com/company/uli81digital" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-slate-400 hover:text-[#00f0ff] transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="https://wa.me/5554991573831?text=Ol%C3%A1%20Ulisses!%20Gostaria%20de%20um%20diagn%C3%B3stico%20digital." target="_blank" rel="noopener noreferrer" class="btn-neon-yellow font-bold px-4 py-2 rounded-lg text-sm">
+                        WhatsApp
+                    </a>
                 </div>
-                
-                <div class="md:hidden flex items-center">
-                    <a href="https://wa.me/5554991573831" class="uli-bg-blue text-white px-4 py-2 rounded-md text-sm font-bold">WhatsApp</a>
+
+                <!-- Botão Menu Mobile -->
+                <div class="md:hidden flex items-center gap-3">
+                    <a href="https://wa.me/5554991573831" target="_blank" rel="noopener noreferrer" class="btn-neon-yellow px-3 py-1.5 rounded-md text-xs font-bold">WhatsApp</a>
+                    <button id="mobile-menu-btn" aria-label="Abrir menu" class="text-slate-200 hover:text-[#00f0ff] p-1">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
                 </div>
             </div>
         </div>
+
+        <!-- Menu Mobile Expansível -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#040d1f] border-t border-cyan-500/20 px-4 pt-3 pb-5 space-y-3 text-slate-200">
+            <a href="#inicio" class="block py-1.5 hover:text-[#00f0ff]">Início</a>
+            <a href="#servicos" class="block py-1.5 hover:text-[#00f0ff]">Soluções</a>
+            <a href="#sobre" class="block py-1.5 hover:text-[#00f0ff]">Quem Sou</a>
+            <a href="#clientes" class="block py-1.5 hover:text-[#00f0ff]">Cases</a>
+            <a href="#faq" class="block py-1.5 hover:text-[#00f0ff]">Dúvidas</a>
+            <a href="#contato" class="block py-1.5 hover:text-[#00f0ff]">Contato</a>
+        </div>
     </nav>
 
-    <main class="container mx-auto p-4 md:p-8 space-y-20">
-        
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-24">
+
         <!-- 1. HERO SECTION -->
-        <section id="inicio" class="hero-section rounded-2xl shadow-2xl overflow-hidden -mt-4 md:-mt-8">
-            <div class="hero-overlay"></div>
-            <div class="hero-content py-20 md:py-32 text-center text-white px-4">
-                <div class="max-w-4xl mx-auto">
-                    <span class="bg-white text-[#0056b3] px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide mb-6 inline-block shadow-md">Consultoria para PMEs e Autônomos</span>
-                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">
-                        Apoio Completo para o Seu Negócio <span class="text-yellow-400">Decolar.</span>
-                    </h1>
-                    <p class="text-xl md:text-2xl mb-10 leading-relaxed opacity-90">
-                        Para quem está começando, para o comércio local e para PMEs que buscam <strong>resultados reais</strong> no mundo digital.
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="https://wa.me/5554991573831" target="_blank" class="bg-yellow-400 text-[#0056b3] font-bold py-4 px-8 rounded-lg text-lg shadow-xl hover:bg-yellow-300 transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                            <i data-lucide="message-circle"></i> Vamos Crescer Juntos
-                        </a>
-                        <a href="#servicos" class="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-white hover:text-[#0056b3] transition flex items-center justify-center gap-2">
-                            Ver Soluções <i data-lucide="arrow-down"></i>
-                        </a>
+        <section id="inicio" class="hero-section rounded-3xl overflow-hidden py-20 md:py-28 px-6 md:px-12 text-center text-white">
+            <div class="max-w-4xl mx-auto relative z-10">
+                <span class="badge-neon px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold uppercase tracking-wider mb-6 inline-flex items-center gap-2">
+                    <i data-lucide="zap" class="w-4 h-4"></i> Erechim/RS e Atendimento para Todo o Brasil
+                </span>
+
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                    Sites, Marketing Digital e <span class="uli-neon-text">Sistemas Sob Medida</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Estrutura digital completa para <strong class="text-white">quem está começando do zero</strong> e para <strong class="text-white">empresas consolidadas</strong> que querem atrair clientes e ganhar produtividade.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/5554991573831?text=Ol%C3%A1%20Ulisses!%20Quero%20pedir%20um%20diagn%C3%B3stico%20digital%20para%20o%20meu%20neg%C3%B3cio."
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn-neon-yellow font-bold py-4 px-8 rounded-xl text-lg flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i> Pedir Meu Diagnóstico
+                    </a>
+                    <a href="#servicos" class="btn-neon-outline font-bold py-4 px-8 rounded-xl text-lg flex items-center justify-center gap-2">
+                        Conhecer Soluções <i data-lucide="arrow-down" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+                <!-- Selos Rápidos de Autoridade -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14 pt-8 border-t border-white/10 text-sm text-slate-300">
+                    <div class="flex items-center justify-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-[#00f0ff]"></i>
+                        <span>Engenharia de Computação + Gestão</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-[#00f0ff]"></i>
+                        <span>Sites Rápidos com Foco no WhatsApp</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-[#00f0ff]"></i>
+                        <span>Atendimento Direto, Sem "Tecniquês"</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. SEÇÃO SOBRE MIM -->
-        <section id="sobre" class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="relative h-full min-h-[400px] bg-gray-100 p-8 flex items-center justify-center">
-                    <img src="assets/images/ulisses.jpg" alt="Ulisses Toazza" class="profile-img w-full max-w-md object-cover h-auto border-4 border-white">
+        <!-- 2. SEÇÃO DE SOLUÇÕES (6 PILARES OFICIAIS) -->
+        <section id="servicos">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-sm font-bold uppercase tracking-widest uli-blue">Nossas Soluções</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 mb-4">
+                    Tudo o que sua marca precisa para crescer no digital
+                </h2>
+                <p class="text-lg text-slate-600">
+                    Unimos tecnologia, design estratégico e visão de negócio em 6 pilares sob medida para o seu momento atual.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Pilar 1 -->
+                <div class="card-dark-neon">
+                    <div class="icon-badge-neon"><i data-lucide="search-check" class="w-6 h-6"></i></div>
+                    <h3 class="text-xl font-bold mb-2">1. Diagnóstico Digital</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Raio-X completo de como sua empresa aparece hoje no Google, site e redes sociais — com plano de ação claro do que priorizar.
+                    </p>
                 </div>
-                <div class="p-8 md:p-12 flex flex-col justify-center">
-                    <h2 class="text-3xl font-bold uli-text-dark mb-2">Olá, sou Ulisses Toazza.</h2>
-                    <p class="text-[#0056b3] font-bold text-lg mb-6">O seu estrategista de tecnologia e negócios.</p>
-                    <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
-                        <p>Minha carreira não começou num escritório com ar condicionado. Começou no <strong>chão de fábrica</strong>. Passei pela logística, pelas compras e cheguei à gerência.</p>
-                        <p>Em cada etapa, vi empresas com potencial perderem dinheiro por causa de tecnologia ruim ou processos lentos. Isso frustrava-me.</p>
-                        <p>Hoje, com formação em <strong>Administração</strong>, <strong>MBA em Logística</strong> e cursando <strong>Engenharia de Computação</strong>, a minha missão é clara:</p>
-                        <p class="font-bold uli-text-dark border-l-4 border-[#0056b3] pl-4">
-                            Traduzir o "tecniquês" para a língua do seu negócio e garantir que você tenha a tecnologia certa para crescer, sem gastar um centavo a mais do que o necessário.
+
+                <!-- Pilar 2 -->
+                <div class="card-dark-neon">
+                    <div class="icon-badge-neon"><i data-lucide="globe" class="w-6 h-6"></i></div>
+                    <h3 class="text-xl font-bold mb-2">2. Criação de Sites Oficiais</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Sites modernos, ultrarrápidos, responsivos no celular, com domínio próprio, SSL e estrutura pensada para gerar contatos no WhatsApp.
+                    </p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="card-dark-neon">
+                    <div class="icon-badge-neon"><i data-lucide="layers" class="w-6 h-6"></i></div>
+                    <h3 class="text-xl font-bold mb-2">3. Organização de Redes Sociais</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Padronização profissional de Instagram, Facebook e criação de Página Corporativa no LinkedIn (bio, links, capas e destaques).
+                    </p>
+                </div>
+
+                <!-- Pilar 4 -->
+                <div class="card-dark-neon">
+                    <div class="icon-badge-neon"><i data-lucide="calendar-check" class="w-6 h-6"></i></div>
+                    <h3 class="text-xl font-bold mb-2">4. Gestão Mensal de Redes</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Produção e agendamento contínuo de conteúdo técnico e persuasivo para fortalecer sua autoridade e atrair clientes organicamente.
+                    </p>
+                </div>
+
+                <!-- Pilar 5 -->
+                <div class="card-dark-neon">
+                    <div class="icon-badge-neon"><i data-lucide="trending-up" class="w-6 h-6"></i></div>
+                    <h3 class="text-xl font-bold mb-2">5. Estratégia Digital (SEO & Ads)</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Otimização para Google e Microsoft Bing, métricas configuradas (GA4/Tag Manager) e campanhas de tráfego pago para acelerar vendas.
+                    </p>
+                </div>
+
+                <!-- Pilar 6 -->
+                <div class="card-dark-neon">
+                    <div class="icon-badge-neon"><i data-lucide="code-2" class="w-6 h-6"></i></div>
+                    <h3 class="text-xl font-bold mb-2">6. Sistemas Personalizados</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Desenvolvimento de sistemas web sob medida para automatizar rotinas, eliminar planilhas soltas e dar mais produtividade à sua equipe.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SEÇÃO QUEM SOU -->
+        <section id="sobre" class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+                <div class="bg-[#040d1f] p-10 md:p-14 flex items-center justify-center h-full">
+                    <img src="assets/images/ulisses.jpg" alt="Ulisses Eduardo Toazza — Fundador da ULI81 Digital" class="profile-img-neon w-full max-w-sm object-cover aspect-square">
+                </div>
+
+                <div class="p-8 md:p-14">
+                    <span class="text-sm font-bold uppercase tracking-widest uli-blue">Quem está por trás da ULI81</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 mb-3">
+                        Olá, sou Ulisses Eduardo Toazza.
+                    </h2>
+                    <p class="text-[#0056b3] font-semibold text-lg mb-6">
+                        Engenheiro de Computação • Administrador • MBA em Logística
+                    </p>
+
+                    <div class="space-y-4 text-slate-600 text-base md:text-lg leading-relaxed">
+                        <p>
+                            Minha trajetória não começou em um escritório com ar-condicionado. Começou no <strong>chão de fábrica</strong>, passando pela logística, compras e gestão de equipes.
+                        </p>
+                        <p>
+                            Em cada etapa, vi empresas ótimas perderem dinheiro por tecnologia mal aplicada, processos travados ou uma presença digital amadora.
+                        </p>
+                        <p class="font-semibold text-slate-900 border-l-4 border-[#0056b3] pl-4 bg-blue-50/70 py-3 rounded-r-lg">
+                            Na ULI81 Digital, minha missão é traduzir o "tecniquês" para a língua do seu negócio e entregar a estrutura certa para você atrair clientes e crescer com segurança.
                         </p>
                     </div>
-                    <div class="mt-8">
-                        <a href="https://wa.me/5554991573831" target="_blank" class="inline-flex items-center font-bold uli-blue hover:text-blue-800 transition">
-                            Vamos conversar sobre o seu projeto <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="https://wa.me/5554991573831?text=Ol%C3%A1%20Ulisses!%20Quero%20conversar%20sobre%20o%20meu%20projeto."
+                           target="_blank" rel="noopener noreferrer"
+                           class="uli-bg-blue hover:bg-[#003a80] text-white font-bold px-6 py-3.5 rounded-xl transition inline-flex items-center gap-2 shadow-lg">
+                            Falar Direto Comigo <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/utoazza/" target="_blank" rel="noopener noreferrer"
+                           class="border-2 border-slate-300 hover:border-[#0056b3] text-slate-700 hover:text-[#0056b3] font-bold px-6 py-3.5 rounded-xl transition inline-flex items-center gap-2">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i> Ver LinkedIn
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. SEÇÃO DE SERVIÇOS -->
-        <section id="servicos">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold uli-text-dark mb-4">O Seu Único Ponto de Contato</h2>
-                <p class="text-xl text-gray-600">Resolvo tudo, da máquina ao marketing, para você focar em vender.</p>
+        <!-- 4. PROVA SOCIAL / CASES -->
+        <section id="clientes" class="bg-[#040d1f] rounded-3xl p-8 md:p-14 text-white border border-cyan-500/20 shadow-2xl">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-sm font-bold uppercase tracking-widest text-[#00f0ff]">Projetos Reais no Ar</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mt-2 mb-3">Quem Confia na ULI81 Digital</h2>
+                <p class="text-slate-400">Sites oficiais, posicionamento digital e soluções sob medida entregues com foco em resultado.</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Consultoria -->
-                <div class="card border-t-4 border-[#0056b3]">
-                    <div class="mb-6">
-                        <div class="w-12 h-12 uli-bg-blue rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="rocket" class="text-white w-6 h-6"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Case 1 -->
+                <div class="card-dark-neon flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl bg-cyan-500/10 border border-cyan-500/30 p-3 rounded-xl">⚖️</span>
+                            <span class="text-xs font-semibold text-[#00f0ff] bg-cyan-500/10 px-3 py-1 rounded-full">Site + Marketing</span>
                         </div>
-                        <h3 class="text-2xl font-bold uli-text-dark">Consultoria & Crescimento (Nacional)</h3>
-                        <p class="text-gray-500 mt-2">Para alavancar resultados e investir com inteligência.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="service-item">
-                            <div class="service-icon-box"><i data-lucide="shopping-cart" class="w-5 h-5 uli-blue"></i></div>
-                            <div><span class="font-bold block text-gray-800">Indicação de Equipamentos</span> Não compre o mais caro, compre o certo.</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-icon-box"><i data-lucide="layout-grid" class="w-5 h-5 uli-blue"></i></div>
-                            <div><span class="font-bold block text-gray-800">Criação de Sites Otimizados</span> Uma vitrine profissional que converte.</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-icon-box"><i data-lucide="trending-up" class="w-5 h-5 uli-blue"></i></div>
-                            <div><span class="font-bold block text-gray-800">Estratégia Digital</span> Tráfego Pago e Orgânico para atrair clientes.</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-icon-box"><i data-lucide="cloud" class="w-5 h-5 uli-blue"></i></div>
-                            <div><span class="font-bold block text-gray-800">Otimização de Software</span> Melhore a produtividade da sua equipa.</div>
+                        <a href="https://crisfisioforense.com.br" target="_blank" rel="noopener noreferrer" class="text-xl font-bold text-white hover:text-[#00f0ff] transition block">
+                            Dra. Cristiane Bohm
+                        </a>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-1 mb-4">Fisioterapia Forense e Perícia Judicial</p>
+                        <div class="quote-box">
+                            "A ULI81 estruturou meu site oficial e minha presença digital com alto padrão técnico. Hoje passo credibilidade imediata e recebo contatos qualificados direto no WhatsApp."
                         </div>
                     </div>
+                    <a href="https://crisfisioforense.com.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-bold text-[#00f0ff] hover:underline mt-5">
+                        Visitar site no ar <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
                 </div>
 
-                <!-- Suporte Técnico -->
-                <div class="card border-t-4 border-gray-400">
-                    <div class="mb-6">
-                        <div class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mb-4">
-                            <i data-lucide="wrench" class="text-white w-6 h-6"></i>
+                <!-- Case 2 -->
+                <div class="card-dark-neon flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl bg-cyan-500/10 border border-cyan-500/30 p-3 rounded-xl">✨</span>
+                            <span class="text-xs font-semibold text-[#00f0ff] bg-cyan-500/10 px-3 py-1 rounded-full">Site Oficial</span>
                         </div>
-                        <h3 class="text-2xl font-bold uli-text-dark">Suporte Técnico (Local/Remoto)</h3>
-                        <p class="text-gray-500 mt-2">Velocidade para resolver problemas do dia a dia.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="service-item">
-                            <div class="service-icon-box"><i data-lucide="shield-check" class="w-5 h-5 text-gray-700"></i></div>
-                            <div><span class="font-bold block text-gray-800">Remoção de Vírus e Segurança</span> Proteção total de dados.</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-icon-box"><i data-lucide="cpu" class="w-5 h-5 text-gray-700"></i></div>
-                            <div><span class="font-bold block text-gray-800">Otimização e Formatação</span> Seu PC 10x mais rápido.</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-icon-box"><i data-lucide="router" class="w-5 h-5 text-gray-700"></i></div>
-                            <div><span class="font-bold block text-gray-800">Redes e Wi-Fi (Erechim/RS)</span> Conectividade estável.</div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-icon-box"><i data-lucide="hard-drive" class="w-5 h-5 text-gray-700"></i></div>
-                            <div><span class="font-bold block text-gray-800">Backup de Dados</span> O seguro do seu negócio.</div>
+                        <a href="https://drakleiprior.com.br" target="_blank" rel="noopener noreferrer" class="text-xl font-bold text-white hover:text-[#00f0ff] transition block">
+                            Dra. Klei Prior
+                        </a>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-1 mb-4">Biomédica Esteta</p>
+                        <div class="quote-box">
+                            "O site ficou elegante, rápido e seguro. A ULI81 traduziu meu olhar sensível para o digital, garantindo uma imagem profissional de alto nível."
                         </div>
                     </div>
+                    <a href="https://drakleiprior.com.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-bold text-[#00f0ff] hover:underline mt-5">
+                        Visitar site no ar <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
                 </div>
-            </div>
-        </section>
 
-        <!-- 4. PROVA SOCIAL -->
-        <section id="clientes" class="bg-blue-50 -mx-4 md:-mx-8 px-4 md:px-8 py-16">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold uli-blue text-center mb-10">Quem Confia no Nosso Trabalho</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="card flex flex-col justify-between min-h-[280px]">
-                        <div>
-                            <div class="mb-4 text-center"><span class="text-4xl bg-blue-100 p-3 rounded-full">⚖️</span></div>
-                            <a href="https://crisfisioforense.com.br" target="_blank" class="client-name-link text-center">Cristiane Bohm dos Santos</a>
-                            <p class="text-xs font-bold text-gray-500 text-center uppercase tracking-wide mb-4">Fisioterapia Forense</p>
+                <!-- Case 3 -->
+                <div class="card-dark-neon flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-3xl bg-cyan-500/10 border border-cyan-500/30 p-3 rounded-xl">🧱</span>
+                            <span class="text-xs font-semibold text-[#00f0ff] bg-cyan-500/10 px-3 py-1 rounded-full">Digital & Sistemas</span>
                         </div>
-                        <div class="quote">"A ULI81 me deu o suporte técnico de alta qualidade que preciso para ter excelência em laudos. Tudo funciona e meu foco é 100% no trabalho."</div>
-                        <a href="https://crisfisioforense.com.br" target="_blank" class="text-xs text-gray-500 mt-2 text-right hover:text-blue-600 block">Ver Site</a>
-                    </div>
-
-                    <div class="card flex flex-col justify-between min-h-[280px]">
-                        <div>
-                            <div class="mb-4 text-center"><span class="text-4xl bg-pink-100 p-3 rounded-full">✨</span></div>
-                            <a href="https://drakleiprior.com.br" target="_blank" class="client-name-link text-center">Dra. Klei Prior</a>
-                            <p class="text-xs font-bold text-gray-500 text-center uppercase tracking-wide mb-4">Biomédica Esteta</p>
+                        <a href="https://mwmpedras.com.br" target="_blank" rel="noopener noreferrer" class="text-xl font-bold text-white hover:text-[#00f0ff] transition block">
+                            MWM Pedras
+                        </a>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mt-1 mb-4">Indústria e Comércio</p>
+                        <div class="quote-box">
+                            "Com a estruturação digital e otimização de sistemas da ULI81, garantimos processos mais eficientes e uma apresentação à altura do nosso produto."
                         </div>
-                        <div class="quote">"O site ficou elegante e seguro. A ULI81 traduziu meu olhar sensível para o digital, garantindo uma imagem profissional."</div>
-                        <a href="https://drakleiprior.com.br" target="_blank" class="text-xs text-gray-500 mt-2 text-right hover:text-blue-600 block">Ver Site</a>
                     </div>
-
-                    <div class="card flex flex-col justify-between min-h-[280px]">
-                        <div>
-                            <div class="mb-4 text-center"><span class="text-4xl bg-gray-200 p-3 rounded-full">🧱</span></div>
-                            <a href="https://mwmpedras.com.br" target="_blank" class="client-name-link text-center">MWM Pedras</a>
-                            <p class="text-xs font-bold text-gray-500 text-center uppercase tracking-wide mb-4">Indústria e Comércio</p>
-                        </div>
-                        <div class="quote">"Com a otimização de sistemas da ULI81, garantimos detalhes impecáveis e processos mais eficientes. Serviço excepcional."</div>
-                        <a href="https://mwmpedras.com.br" target="_blank" class="text-xs text-gray-500 mt-2 text-right hover:text-blue-600 block">Ver Site</a>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-8">
-                    <a href="https://wa.me/5554991573831" target="_blank" class="uli-bg-blue text-white font-bold py-3 px-8 rounded-lg inline-block transition-colors hover:bg-blue-700 shadow-lg">
-                        Seja o Nosso Próximo Caso de Sucesso!
+                    <a href="https://mwmpedras.com.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-bold text-[#00f0ff] hover:underline mt-5">
+                        Visitar site no ar <i data-lucide="external-link" class="w-4 h-4"></i>
                     </a>
                 </div>
             </div>
+
+            <div class="text-center mt-12">
+                <a href="https://wa.me/5554991573831?text=Ol%C3%A1%20Ulisses!%20Vi%20os%20cases%20no%20site%20e%20quero%20um%20or%C3%A7amento."
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn-neon-yellow font-bold py-4 px-8 rounded-xl inline-flex items-center gap-2 text-base">
+                    Quero o Meu Projeto no Ar <i data-lucide="rocket" class="w-5 h-5"></i>
+                </a>
+            </div>
         </section>
 
-        <!-- 5. FAQ (MELHORADA E INTERATIVA) -->
+        <!-- 5. FAQ INTERATIVA -->
         <section id="faq" class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold uli-text-dark text-center mb-10">Tire Suas Dúvidas</h2>
-            <div class="space-y-4"> <!-- Espaçamento entre as perguntas -->
-                
-                <!-- FAQ Item 1 -->
-                <div class="card border border-gray-100">
-                    <button class="flex justify-between items-center w-full py-2 text-left font-bold text-gray-700 hover:text-[#0056b3] transition-colors" onclick="toggleAccordion('faq1')">
-                        O serviço é caro para um pequeno negócio? 
-                        <!-- Ícone envolvido em SPAN para girar -->
-                        <span class="icon-wrapper transition-transform duration-300 transform rotate-0"><i data-lucide="chevron-down" class="w-5 h-5 text-[#0056b3]"></i></span>
+            <div class="text-center mb-10">
+                <span class="text-sm font-bold uppercase tracking-widest uli-blue">Perguntas Frequentes</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">Tire Suas Dúvidas</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="card-tech !p-5">
+                    <button type="button" class="flex justify-between items-center w-full text-left font-bold text-slate-800 hover:text-[#0056b3] transition" onclick="toggleAccordion('faq1', this)">
+                        <span>Estou começando agora e tenho orçamento enxuto. A ULI81 me atende?</span>
+                        <span class="icon-wrapper"><i data-lucide="chevron-down" class="w-5 h-5 text-[#0056b3]"></i></span>
                     </button>
-                    <div id="faq1" class="accordion-content hidden opacity-0 transition-all duration-300">
-                        <p class="pt-3 text-gray-600 leading-relaxed">Focamos em <strong>valor bom</strong>. A nossa consultoria poupa dinheiro ao evitar compras erradas e paragens inesperadas. É um investimento que se paga.</p>
+                    <div id="faq1" class="accordion-content">
+                        <p class="text-slate-600 leading-relaxed">
+                            Sim! Atendemos desde autônomos e pequenos negócios dando o primeiro passo até empresas consolidadas. Fazemos um diagnóstico inicial para montar um plano que cabe na sua realidade e traz retorno rápido.
+                        </p>
                     </div>
                 </div>
 
-                <!-- FAQ Item 2 -->
-                <div class="card border border-gray-100">
-                    <button class="flex justify-between items-center w-full py-2 text-left font-bold text-gray-700 hover:text-[#0056b3] transition-colors" onclick="toggleAccordion('faq2')">
-                        Quanto tempo demora para arrumar meu PC? 
-                        <span class="icon-wrapper transition-transform duration-300 transform rotate-0"><i data-lucide="chevron-down" class="w-5 h-5 text-[#0056b3]"></i></span>
+                <!-- FAQ 2 -->
+                <div class="card-tech !p-5">
+                    <button type="button" class="flex justify-between items-center w-full text-left font-bold text-slate-800 hover:text-[#0056b3] transition" onclick="toggleAccordion('faq2', this)">
+                        <span>Vocês cuidam também do domínio (.com.br) e da hospedagem do site?</span>
+                        <span class="icon-wrapper"><i data-lucide="chevron-down" class="w-5 h-5 text-[#0056b3]"></i></span>
                     </button>
-                    <div id="faq2" class="accordion-content hidden opacity-0 transition-all duration-300">
-                        <p class="pt-3 text-gray-600 leading-relaxed">Com nosso diagnóstico rápido, muitas vezes resolvemos remotamente no mesmo dia. Serviços físicos têm prazo preciso após avaliação.</p>
+                    <div id="faq2" class="accordion-content">
+                        <p class="text-slate-600 leading-relaxed">
+                            Cuidamos de toda a configuração técnica passo a passo — registro do domínio oficial no seu nome/CNPJ, certificado de segurança SSL (cadeado verde), velocidade otimizada e integração com Google e WhatsApp.
+                        </p>
                     </div>
                 </div>
 
-                <!-- FAQ Item 3 -->
-                <div class="card border border-gray-100">
-                    <button class="flex justify-between items-center w-full py-2 text-left font-bold text-gray-700 hover:text-[#0056b3] transition-colors" onclick="toggleAccordion('faq3')">
-                        Não sou de Erechim/RS. Podem me atender? 
-                        <span class="icon-wrapper transition-transform duration-300 transform rotate-0"><i data-lucide="chevron-down" class="w-5 h-5 text-[#0056b3]"></i></span>
+                <!-- FAQ 3 -->
+                <div class="card-tech !p-5">
+                    <button type="button" class="flex justify-between items-center w-full text-left font-bold text-slate-800 hover:text-[#0056b3] transition" onclick="toggleAccordion('faq3', this)">
+                        <span>Não sou de Erechim/RS. Posso contratar a ULI81 Digital?</span>
+                        <span class="icon-wrapper"><i data-lucide="chevron-down" class="w-5 h-5 text-[#0056b3]"></i></span>
                     </button>
-                    <div id="faq3" class="accordion-content hidden opacity-0 transition-all duration-300">
-                        <p class="pt-3 text-gray-600 leading-relaxed">Sim! Consultoria e serviços digitais são 100% online para todo o Brasil. Suporte físico foca na região de Erechim.</p>
+                    <div id="faq3" class="accordion-content">
+                        <p class="text-slate-600 leading-relaxed">
+                            Com certeza! 100% dos nossos serviços — sites, organização e gestão de redes sociais, SEO, tráfego e sistemas sob medida — são entregues online para clientes em todo o Brasil, com reuniões rápidas por vídeo ou WhatsApp.
+                        </p>
                     </div>
                 </div>
 
+                <!-- FAQ 4 -->
+                <div class="card-tech !p-5">
+                    <button type="button" class="flex justify-between items-center w-full text-left font-bold text-slate-800 hover:text-[#0056b3] transition" onclick="toggleAccordion('faq4', this)">
+                        <span>Como funciona para criar um sistema personalizado para minha empresa?</span>
+                        <span class="icon-wrapper"><i data-lucide="chevron-down" class="w-5 h-5 text-[#0056b3]"></i></span>
+                    </button>
+                    <div id="faq4" class="accordion-content">
+                        <p class="text-slate-600 leading-relaxed">
+                            Primeiro entendemos a rotina real da sua equipe e onde estão os gargalos (planilhas manuais, controle de clientes, prazos ou relatórios). Depois desenhamos uma solução web sob medida, simples de usar no computador ou celular.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
 
     <!-- RODAPÉ -->
-    <footer id="contato" class="bg-gray-900 text-white pt-16 pb-8 mt-20">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center mb-4">
-                        <img src="logo.png" alt="Logo Footer" class="h-12 w-auto mr-3 bg-white rounded p-1">
-                        <span class="text-2xl font-bold tracking-wider">ULI81 DIGITAL</span>
+    <footer id="contato" class="bg-[#040d1f] text-white pt-16 pb-8 mt-20 border-t border-cyan-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="logo.png" alt="Logo ULI81 Digital" class="nav-logo">
+                        <span class="text-2xl font-extrabold tracking-tight">ULI81 <span class="text-[#00f0ff]">DIGITAL</span></span>
                     </div>
-                    <p class="text-gray-400 text-lg max-w-md">Não deixe a tecnologia travar o seu crescimento. Fale com o seu estrategista digital hoje.</p>
+                    <p class="text-slate-400 text-base max-w-md leading-relaxed">
+                        Sites profissionais, marketing digital, gestão de redes sociais e sistemas sob medida para transformar sua presença online em resultados reais.
+                    </p>
                 </div>
-                
+
                 <div>
-                    <h4 class="text-xl font-bold mb-6 border-b-2 border-[#0056b3] inline-block pb-2">Fale Comigo</h4>
-                    <ul class="space-y-4 text-gray-300">
-                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5 text-[#0056b3]"></i> (54) 99157-3831</li>
-                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-5 h-5 text-[#0056b3]"></i> uli81consultoria@gmail.com</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-[#0056b3]"></i> Erechim, RS (Atendimento Nacional)</li>
+                    <h4 class="text-lg font-bold mb-5 text-[#00f0ff]">Contato Direto</h4>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li>
+                            <a href="https://wa.me/5554991573831" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 hover:text-[#00f0ff] transition">
+                                <i data-lucide="phone" class="w-4 h-4 text-[#00f0ff]"></i> (54) 99157-3831
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:uli81consultoria@gmail.com" class="flex items-center gap-3 hover:text-[#00f0ff] transition">
+                                <i data-lucide="mail" class="w-4 h-4 text-[#00f0ff]"></i> uli81consultoria@gmail.com
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-[#00f0ff]"></i> Erechim/RS • Atendimento Nacional
+                        </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-xl font-bold mb-6 border-b-2 border-[#0056b3] inline-block pb-2">Siga-nos</h4>
-                    <div class="flex gap-4">
-                        <a href="https://www.instagram.com/uli81_consultoria_digital?utm_source=qr&igsh=MWtsMGMzcHNydmhkdA==" target="_blank" class="bg-gray-800 p-3 rounded-full hover:bg-pink-600 transition"><i data-lucide="instagram" class="w-6 h-6"></i></a>
-                        <a href="https://www.facebook.com/uli81consultoriadigital" target="_blank" class="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                    <h4 class="text-lg font-bold mb-5 text-[#00f0ff]">Redes Oficiais</h4>
+                    <div class="flex gap-3">
+                        <a href="https://www.instagram.com/uli81_consultoria_digital/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="bg-slate-800/80 border border-slate-700 p-3 rounded-xl hover:border-[#00f0ff] hover:text-[#00f0ff] transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.facebook.com/uli81consultoriadigital" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="bg-slate-800/80 border border-slate-700 p-3 rounded-xl hover:border-[#00f0ff] hover:text-[#00f0ff] transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/uli81digital" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="bg-slate-800/80 border border-slate-700 p-3 rounded-xl hover:border-[#00f0ff] hover:text-[#00f0ff] transition">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2026 ULI81 Consultoria Digital. Todos os direitos reservados.</p>
+
+            <div class="border-t border-slate-800 pt-6 text-center text-slate-500 text-xs">
+                <p>&copy; 2026 ULI81 Digital — Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPT ATUALIZADO PARA A FAQ -->
+    <!-- SCRIPTS -->
     <script>
         lucide.createIcons();
 
-        function toggleAccordion(id) {
-            const content = document.getElementById(id);
-            const button = document.querySelector(`button[onclick="toggleAccordion('${id}')"]`);
-            const iconWrapper = button.querySelector('.icon-wrapper');
-            
-            // Se já está aberto, fecha
-            if (!content.classList.contains('hidden')) {
-                content.classList.add('hidden');
-                content.classList.remove('opacity-100');
-                content.classList.add('opacity-0');
-                iconWrapper.style.transform = 'rotate(0deg)';
-            } else {
-                // Fecha todos os outros
-                document.querySelectorAll('.accordion-content').forEach(el => {
-                    el.classList.add('hidden');
-                    el.classList.remove('opacity-100');
-                    el.classList.add('opacity-0');
-                });
-                document.querySelectorAll('.icon-wrapper').forEach(el => {
-                    el.style.transform = 'rotate(0deg)';
-                });
+        // Menu Mobile
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
 
-                // Abre o atual
-                content.classList.remove('hidden');
-                // Pequeno delay para a transição de opacidade funcionar
-                setTimeout(() => {
-                    content.classList.remove('opacity-0');
-                    content.classList.add('opacity-100');
-                }, 10);
+        // Acordeão FAQ
+        function toggleAccordion(id, button) {
+            const content = document.getElementById(id);
+            const iconWrapper = button.querySelector('.icon-wrapper');
+            const isOpen = content.classList.contains('open');
+
+            document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+            document.querySelectorAll('.icon-wrapper').forEach(el => el.style.transform = 'rotate(0deg)');
+
+            if (!isOpen) {
+                content.classList.add('open');
                 iconWrapper.style.transform = 'rotate(180deg)';
             }
         }
